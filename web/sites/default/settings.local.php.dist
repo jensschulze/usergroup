@@ -5,7 +5,7 @@ declare(strict_types=1);
 $dbParameters = parse_url(getenv('DB_DSN'));
 
 $databases['default']['default'] = [
-  'host' => $dbParameters['host'],
+  'host' => 'sqlite' === $dbParameters['scheme'] ? '' : $dbParameters['host'],
   'port' => $dbParameters['port'],
   'username' => $dbParameters['user'],
   'password' => $dbParameters['pass'],
