@@ -1,0 +1,12 @@
+/.git
+/.idea
+.DS_Store
+
+# Ignore files that will be installed by Composer
+/drush/Commands
+/web/core
+/web/libraries
+/web/modules/contrib
+/web/profiles/contrib
+/web/themes/contrib
+/vendor
