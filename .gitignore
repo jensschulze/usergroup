@@ -28,7 +28,7 @@
 !/var/dbdump/.gitignore
  
 # Ignore private files
-/web/sites/*/private
+/web/sites/*/private/*
 
 # Unignore private .htaccess
 !/web/sites/default/private/.htaccess
