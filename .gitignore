@@ -2,10 +2,10 @@
 /drush/contrib/
 /vendor/
 /web/core/
-/web/modules/contrib/
-/web/themes/contrib/
-/web/profiles/contrib/
 /web/libraries/
+/web/modules/contrib/
+/web/profiles/contrib/
+/web/themes/contrib/
 
 # Ignore Drupal's file directory
 /web/sites/*/files/*
