@@ -14,3 +14,12 @@ $databases['default']['default'] = [
   'prefix' => getenv('DB_PREFIX') ?: '',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\'.$dbParameters['scheme'],
 ];
+
+$settings['trusted_host_patterns'] = [
+  '127\.+',
+  '^.+\.local',
+  '^localhost$',
+  '^.+\.localhost$',
+];
+
+$settings['file_private_path'] = 'sites/default/private';

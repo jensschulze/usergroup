@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+    web-php:
+        build: .
+        image: usergroup/drupal:local-dev
+        env_file:
+            - .env
+        volumes:
+            - ./:/var/www/html:cached
+        ports:
+            - 80:80
+
+    web-db:
+        image: mariadb:latest
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=drupal
+            - MYSQL_USER=drupal
+            - MYSQL_PASSWORD=drupal
+        ports:
+           - 8306:3306
+        volumes:
+            - ./var/dbdata:/var/lib/mysql:cached
+            - ./var/dbdump:/docker-entrypoint-initdb.d

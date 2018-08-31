@@ -21,3 +21,14 @@
 
 # Unignore SQLite DB file
 !/web/sites/default/files/drupaldb.sqlite
+
+# Ignore var but create var/dbdata and var/dbdump
+/var/*
+!/var/dbdata/.gitignore
+!/var/dbdump/.gitignore
+ 
+# Ignore private files
+/web/sites/*/private
+
+# Unignore private .htaccess
+!/web/sites/default/private/.htaccess
