@@ -1,6 +1,4 @@
-# Composer template for the Drupal Usergroup event 2018-08-30
-
-[![Build Status](https://travis-ci.org/jensschulze/usergroup.svg?branch=master)](https://travis-ci.org/jensschulze/usergroup)
+# Basic Drupal for the Drupal Usergroup event 2018-08-30
 
 ## What is this?
 This is a _vanilla_ Drupal installation with a SQLite database. It was built in three easy steps:
@@ -18,7 +16,7 @@ cd usergroup
 vendor/bin/drupal si standard \
     --langcode="en" \
     --db-type="sqlite" \
-    --db-file="sites/deault/files/drupaldb.sqlite " \
+    --db-file="sites/default/files/drupaldb.sqlite " \
     --account-name=admin \
     --account-pass=admin \
     --account-mail=admin@example.com \
@@ -34,6 +32,8 @@ vendor/bin/drupal si standard \
 cp .env.dist .env
 ```
 The environment variables defined in the `.env` file will be accessible in Drupal via `load.environment.php` which is called as soon as the Composer Autoloader is required in the Front Controller `web/index.php`.
+
+☝️ Please have a look at `.env` and `settings.local.php`: this is how we define the database via an environment variable.
 
 * Install dependencies
 ```bash
