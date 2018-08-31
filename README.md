@@ -109,7 +109,12 @@ docker-compose down
 ```
 
 #### A bit more advanced
-Let’s try to use MariaDB instead of SQLite! It’s alreade preconfigured in the `docker-compose.yml` file, so all you have to do is to start the whole stack with `docker-compose up`. This is even simpler than starting only one service of the stack! Turn off and remove the whole stack with `docker-compose down`.
+Let’s try to use MariaDB instead of SQLite! It’s already preconfigured in the `docker-compose.yml` file, so all you have to do is to change the environment variable `DB_DSN` in `.env`, and then start the whole stack with
+```bash
+docker-compose up
+```
+
+This is even simpler than starting only one service of the stack! Turn off and remove the whole stack with `docker-compose down`.
 
 ## Questions
 1. The data we store in the database is persistent: We can down and up the stack again – and our Drupal installation is still there. The database files must exist somewhere on the host (your local machine). But where are they?
