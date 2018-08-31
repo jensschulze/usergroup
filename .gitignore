@@ -20,4 +20,4 @@
 /.env
 
 # Unignore SQLite DB file
-!/web/sites/default/files/drupaldb.sqlite*
+!/web/sites/default/files/drupaldb.sqlite
