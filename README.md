@@ -29,9 +29,14 @@ vendor/bin/drupal si standard \
 * Add a `web/sites/default/settings.local.php`, remove it from `.gitignore`, and include it in `web/sites/default/settings.php`.
 
 ## Preparation
-Copy `.env.dist` to `.env`.
+* Copy `.env.dist` to `.env`.
 ```bash
 cp .env.dist .env
+```
+
+* Install dependencies
+```bash
+composer install
 ```
 
 ## Running Drupal
