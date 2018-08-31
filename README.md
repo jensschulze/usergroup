@@ -33,6 +33,7 @@ vendor/bin/drupal si standard \
 ```bash
 cp .env.dist .env
 ```
+The environment variables defined in the `.env` file will be accessible in Drupal via `load.environment.php` which is called as soon as the Composer Autoloader is required in the Front Controller `web/index.php`.
 
 * Install dependencies
 ```bash
