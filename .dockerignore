@@ -2,6 +2,7 @@
 /.idea
 .DS_Store
 
+.env
 Dockerfile
 docker-compose.yml
 
@@ -13,3 +14,15 @@ docker-compose.yml
 /web/modules/contrib
 /web/profiles/contrib
 /web/themes/contrib
+
+# Ignore Drupal's file directory
+/web/sites/*/files/*
+
+# Unignore SQLite DB file
+!/web/sites/default/files/drupaldb.sqlite
+
+# Ignore private files
+/web/sites/*/private/*
+
+# Unignore .htaccess in private folder
+!/web/sites/default/private/.htaccess

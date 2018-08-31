@@ -85,5 +85,5 @@ WORKDIR $APP_ROOT
 COPY . .
 RUN composer dump-autoload
 
-# Fix SQLite DB file permissions (git stores only the "executable" bit)
-RUN chown -R www-data:www-data web/sites/default/files
+# Set ownership for files/directories we have to write into
+RUN chown -R www-data:www-data ./web/sites/default/private ./web/sites/default/files
